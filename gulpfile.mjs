@@ -2,13 +2,13 @@ import gulp from 'gulp';
 import sass from 'gulp-sass';
 
 gulp.task('sass', () => {
-    return gulp.src(paths.sass + '/**/*.scss')
+    return gulp.src('./scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest(paths.webroot + 'css/'));
+        .pipe(gulp.dest('./css'));
 });
 
 gulp.task('watch', () => {
-    return gulp.watch('_config/scss/**/*.scss', gulp.series('sass'));
+    return gulp.watch('./scss/**/*.scss', gulp.series('sass'));
 });
 
 gulp.task('default', gulp.series('watch'));
