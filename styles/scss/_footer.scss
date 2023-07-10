@@ -1,0 +1,33 @@
+@import '_variables';
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    background-color: $black;
+    padding: 50px 20px ;
+
+    p{
+        color: &white;
+        padding: 0 100px;
+    }
+
+    img {
+        height: 110px;
+        width: 150px;
+    }
+
+    a{
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+        color: $white;
+        text-transform: uppercase;
+
+        &:hover{
+            color: $primary-color;
+        }
+    }
+
+}
