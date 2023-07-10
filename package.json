@@ -1,7 +1,6 @@
 {
   "name": "github",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "sass-dev": "sass --watch --update --style=expanded styles/scss:styles/css",
@@ -13,6 +12,9 @@
     "node-sass": "^9.0.0"
   },
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
     "sass": "^1.63.6"
-  }
+  },
+  "description": ""
 }
