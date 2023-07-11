@@ -3,16 +3,12 @@
 
 footer{
 
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
+    @include grid($columns: 1fr 1fr 1fr, $gap: 30px);
     justify-content: center;
     align-items: flex-end;
-
-    background-color: $black;
+    background-color: $black-color;
     padding: 60px 0px ;
-
+    
     p{
         color: #fff;
         text-align: center;
@@ -28,14 +24,13 @@ footer{
     }
 
     nav{
-
         justify-self: start;
 
         a{
             display: block;
             padding: 6px 12px;
             text-decoration: none;
-            color: $white;
+            color: $white-color;
             text-transform: uppercase;
 
             &:hover{
