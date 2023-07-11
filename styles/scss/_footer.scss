@@ -1,32 +1,46 @@
 @import '_variables';
+@import '_mixin';
 
 footer{
-    display: flex;
+
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
     justify-content: center;
     align-items: flex-end;
-    gap: 30px;
 
     background-color: $black;
     padding: 60px 0px ;
 
     p{
         color: #fff;
+        text-align: center;
+        justify-self: center;
     }
 
     img {
-        height: 110px;
-        width: 150px;
+        height: 80px;
+        max-width: 150px;
+        justify-self: end;
+
+       
     }
 
-    a{
-        display: block;
-        padding: 6px 12px;
-        text-decoration: none;
-        color: $white;
-        text-transform: uppercase;
+    nav{
 
-        &:hover{
-            color: $primary-color;
+        justify-self: start;
+
+        a{
+            display: block;
+            padding: 6px 12px;
+            text-decoration: none;
+            color: $white;
+            text-transform: uppercase;
+
+            &:hover{
+                color: $primary-color;
+            }
         }
     }
 

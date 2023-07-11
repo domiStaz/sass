@@ -1,22 +1,21 @@
 @import '_variables';
+@import '_mixin';
 
 header{
     background-color: $white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 20px 20px;
 
-    img{
-        width: 60px;
-        padding: 20px 50px;
-    }
-
+    @include grid($columns: 1fr 3fr, $gap: 10px);
+            
+        img{
+            width: 60px;
+            place-self: center;
+        }
        
-    .nav-menu {
-
+    nav{
         list-style-type: none;
+        justify-content: center;
         text-align: center;
-        margin: 0 auto;
         padding: 0;
 
         li { 
@@ -27,16 +26,28 @@ header{
                 padding: 6px 12px;
                 text-decoration: none;
                 color: $black;
-                text-transform: uppercase;
-        
+                
                 &:hover{
                     color: $primary-color;
                 }
-            }
-    
 
+                &.last{
+                    @include rounded-button($primary-color, $white, 20px);
+                }
+            }
+            @include min-width(small) {
+                display: none;
+            }
         }
-    }       
+
+        @include min-width(small) {
+            background-color: $primary-color;
+        }
+    }  
+    
+    @include min-width(small) {
+        @include grid($columns: 1fr 1fr, $gap: 50px);
+
+    }
     
 }
-
