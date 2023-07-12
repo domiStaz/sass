@@ -7,17 +7,17 @@ import plumber from 'gulp-plumber';
 
 
 gulp.task('sass', () => {
-    return gulp.src('./sass/*.scss')
+    return gulp.src('./src/*.scss')
         .pipe(plumber({ errorHandler: error }))
         .pipe(initedSass())
-        .pipe(gulp.dest('./css'));
+        .pipe(gulp.dest('./destination'));
 });
 
 gulp.task('watch', () => {
     console.log('watch');
     del(['./css/main.css']);
     console.log('watch');
-    gulp.watch('./scss/*.scss', gulp.series('sass'));
+    gulp.watch('./src/*.scss', gulp.series('sass'));
 });
 
 

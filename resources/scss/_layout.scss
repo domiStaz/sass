@@ -9,7 +9,6 @@
   margin: 0;
 }
 
-
 body{
     h1{
         @include h1();
@@ -20,18 +19,9 @@ body{
 
     background-color: $white-color;
     font-family: $primary-font;
-
 }
 
 img{
     width: 100px;
-}
-
-
-nav{
-    list-style-type: none;
-    justify-content: center;
-    text-align: center;
-    padding: 0;
 }
 

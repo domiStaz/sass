@@ -12,6 +12,12 @@ header .wrapper img {
   width: 60px;
   place-self: center;
 }
+header .wrapper nav {
+  list-style-type: none;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+}
 header .wrapper nav li {
   display: inline-block;
 }
@@ -35,17 +41,7 @@ header .wrapper nav li a.last:hover {
   border-radius: 20px;
 }
 @media (max-width: 576px) {
-  header .wrapper nav li {
-    display: none;
-  }
-}
-@media (max-width: 576px) {
-  header .wrapper nav {
-    background-color: #cf6299;
-  }
-}
-@media (max-width: 576px) {
-  header {
+  header .wrapper {
     display: grid;
     gap: 50px;
     grid-template-columns: 1fr 1fr;
@@ -102,22 +98,21 @@ body h1 {
   padding: 15px 0;
   margin: none;
 }
+@media (max-width: 576px) {
+  body h1 {
+    font-size: 38px;
+  }
+}
 body h2 {
   font-size: 30px;
   color: #cf6299;
   padding: 10px 0;
   margin: none;
 }
-
-img {
-  width: 100px;
-}
-
-nav {
-  list-style-type: none;
-  justify-content: center;
-  text-align: center;
-  padding: 0;
+@media (max-width: 576px) {
+  body h2 {
+    font-size: 20px;
+  }
 }
 
 .about-scss {
@@ -129,7 +124,7 @@ nav {
   grid-template-columns: repeat(3, [col-start] 1fr);
   margin: 30px auto;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .about-scss .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -148,15 +143,25 @@ nav {
   margin-bottom: 10px;
   text-transform: uppercase;
 }
+@media (max-width: 576px) {
+  .about-scss .container .item h3 {
+    font-size: 18px;
+  }
+}
 .about-scss .container .item p {
   color: #FFFFFF;
 }
-.about-scss .container .item-lighted {
+@media (max-width: 576px) {
+  .about-scss .container .item p {
+    font-size: 16px;
+  }
+}
+.about-scss .container .item:nth-child(even) {
   background-color: #cf6299;
   padding: 40px 30px;
   border-radius: 20px;
 }
-.about-scss .container .item-lighted h3 {
+.about-scss .container .item:nth-child(even) h3 {
   font-size: 20px;
   color: #101010;
   padding: none;
@@ -164,8 +169,18 @@ nav {
   margin-bottom: 10px;
   text-transform: uppercase;
 }
-.about-scss .container .item-lighted p {
+@media (max-width: 576px) {
+  .about-scss .container .item:nth-child(even) h3 {
+    font-size: 18px;
+  }
+}
+.about-scss .container .item:nth-child(even) p {
   color: #FFFFFF;
+}
+@media (max-width: 576px) {
+  .about-scss .container .item:nth-child(even) p {
+    font-size: 16px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

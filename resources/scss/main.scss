@@ -8,15 +8,11 @@
 .about-scss{
 
     margin: 50px 100px;
-
     @include min-width(small) ;
 
     .container{
-
-        @include min-width(small) {
-
+        @include min-width(medium) {
             @include grid($columns: 1fr);
-    
         }
 
         @include grid($columns: repeat(3, [col-start] 1fr), $gap: 30px);
@@ -24,25 +20,12 @@
 
         .item{
             @include item-style($secodary-color, 20px, $black-color, $white-color);
+
+            &:nth-child(even) {
+                @include item-style($primary-color, 20px, $black-color, $white-color);
+            }
         }
-
-
-        .item-lighted{
-
-            @include item-style($primary-color, 20px, $black-color, $white-color);
-
-        }
-
     }
-
-     
-    // @include min-width(small) {
-    //     &.container{
-    //     @include grid($columns: 1fr);
-    //     }
-
-    // }
-    
-    
 }
+
 

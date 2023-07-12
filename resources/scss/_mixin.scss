@@ -12,7 +12,10 @@
     text-transform: uppercase;
   }
   p{
-      color: $decription-color
+      color: $decription-color;
+      @include min-width(small) {
+        font-size: 16px;
+      }
   }
 
 }
@@ -22,6 +25,9 @@
     color: $color;
     padding: $padding;
     margin: none;
+    @include min-width(small) {
+      font-size: 38px;
+    }
 }
 
 @mixin h2($size: 30px, $color: $primary-color, $padding: 10px 0, $margin: none){
@@ -29,6 +35,9 @@
     color: $color;
     padding: $padding;
     margin: none;
+    @include min-width(small) {
+      font-size: 20px;
+    }
 }
 
 
@@ -37,6 +46,10 @@
     color: $color;
     padding: $padding;
     margin: none;
+
+    @include min-width(small) {
+      font-size: 18px;
+    }
 }
 
 

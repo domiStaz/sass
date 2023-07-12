@@ -15,6 +15,11 @@ header{
         }
         
         nav{
+            list-style-type: none;
+            justify-content: center;
+            text-align: center;
+            padding: 0;
+
             li { 
                 display: inline-block; 
 
@@ -36,20 +41,14 @@ header{
                         }
                     }
                 }
-                @include min-width(small) {
-                    display: none;
-                }
             }
 
-            @include min-width(small) {
-                background-color: $primary-color;
-            }
         }  
-    }
     
-    @include min-width(small) {
-        @include grid($columns: 1fr 1fr, $gap: 50px);
+        @include min-width(small) {
+            @include grid($columns: 1fr 1fr, $gap: 50px);
 
+        }
     }
     
 }
