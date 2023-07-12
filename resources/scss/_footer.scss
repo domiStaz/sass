@@ -2,37 +2,40 @@
 @import '_mixin';
 
 footer{
+    .wrapper{
 
-    @include grid($columns: 1fr 1fr 1fr, $gap: 30px);
-    justify-content: center;
-    align-items: flex-end;
-    background-color: $black-color;
-    padding: 60px 0px ;
-    
-    p{
-        color: #fff;
-        text-align: center;
-        justify-self: center;
-    }
+        @include grid($columns: 1fr 1fr 1fr, $gap: 30px);
+        justify-content: center;
+        align-items: flex-end;
+        background-color: $black-color;
+        padding: 60px 0px ;
+        margin: 0 auto;
+        
+        p{
+            color: #fff;
+            text-align: center;
+            justify-self: center;
+        }
 
-    img {
-        height: 80px;
-        max-width: 150px;
-        justify-self: end;
-    }
+        img {
+            height: 80px;
+            max-width: 150px;
+            justify-self: end;
+        }
 
-    nav{
-        justify-self: start;
+        nav{
+            justify-self: start;
 
-        a{
-            display: block;
-            padding: 6px 12px;
-            text-decoration: none;
-            color: $white-color;
-            text-transform: uppercase;
+            a{
+                display: block;
+                padding: 6px 12px;
+                text-decoration: none;
+                color: $white-color;
+                text-transform: uppercase;
 
-            &:hover{
-                color: $primary-color;
+                &:hover{
+                    color: $primary-color;
+                }
             }
         }
     }

@@ -5,20 +5,17 @@ import sass from 'sass';
 const initedSass = gulpSass(sass);
 import plumber from 'gulp-plumber';
 
-
 gulp.task('sass', () => {
-    return gulp.src('./src/*.scss')
-        .pipe(plumber({ errorHandler: error }))
+    return gulp.src('./resources/scss/*.scss')
+        .pipe(plumber())
         .pipe(initedSass())
-        .pipe(gulp.dest('./destination'));
+        .pipe(gulp.dest('./public/css'));
 });
+
 
 gulp.task('watch', () => {
     console.log('watch');
-    del(['./css/main.css']);
-    console.log('watch');
-    gulp.watch('./src/*.scss', gulp.series('sass'));
+    gulp.watch('./resources/scss/*.scss', gulp.series('sass'));
 });
-
 
 gulp.task('default', gulp.series('watch'));

@@ -7,22 +7,24 @@
 
 .about-scss{
 
-    margin: 50px 100px;
-    @include min-width(small) ;
+    .wrapper{
+        margin: 50px 100px;
+        @include min-width(small) ;
 
-    .container{
-        @include min-width(medium) {
-            @include grid($columns: 1fr);
-        }
+        .container{
+            @include min-width(medium) {
+                @include grid($columns: 1fr);
+            }
 
-        @include grid($columns: repeat(3, [col-start] 1fr), $gap: 30px);
-        margin: 30px auto;
+            @include grid($columns: repeat(3, [col-start] 1fr), $gap: 30px);
+            margin: 30px auto;
 
-        .item{
-            @include item-style($secodary-color, 20px, $black-color, $white-color);
+            .item{
+                @include item-style($secodary-color, 20px, $black-color, $white-color);
 
-            &:nth-child(even) {
-                @include item-style($primary-color, 20px, $black-color, $white-color);
+                &:nth-child(even) {
+                    @include item-style($primary-color, 20px, $black-color, $white-color);
+                }
             }
         }
     }

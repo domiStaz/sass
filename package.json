@@ -3,21 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass-dev": "sass --watch --update --style=expanded resources/scss:public/css",
-    "sass-prod": "sass --no-source-map --style=compressed resources/scss:public/css"
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "del": "^7.0.0",
-    "gulp-plumber": "^1.2.1",
-    "node-sass": "^9.0.0",
-    "sass-embedded": "^1.63.6"
-  },
-  "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
     "gulp-sass": "^5.1.0",
-    "sass": "^1.63.6"
+    "sass": "^1.43.4"
   },
+  "devDependencies": {},
   "description": ""
 }

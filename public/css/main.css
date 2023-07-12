@@ -1,9 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
-header {
+header .wrapper {
   background-color: #FFFFFF;
   padding: 20px 20px;
-}
-header .wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
   display: grid;
   gap: 10px;
   grid-template-columns: 1fr 3fr;
@@ -48,7 +48,7 @@ header .wrapper nav li a.last:hover {
   }
 }
 
-footer {
+footer .wrapper {
   display: grid;
   gap: 30px;
   grid-template-columns: 1fr 1fr 1fr;
@@ -56,28 +56,29 @@ footer {
   align-items: flex-end;
   background-color: #101010;
   padding: 60px 0px;
+  margin: 0 auto;
 }
-footer p {
+footer .wrapper p {
   color: #fff;
   text-align: center;
   justify-self: center;
 }
-footer img {
+footer .wrapper img {
   height: 80px;
   max-width: 150px;
   justify-self: end;
 }
-footer nav {
+footer .wrapper nav {
   justify-self: start;
 }
-footer nav a {
+footer .wrapper nav a {
   display: block;
   padding: 6px 12px;
   text-decoration: none;
   color: #FFFFFF;
   text-transform: uppercase;
 }
-footer nav a:hover {
+footer .wrapper nav a:hover {
   color: #cf6299;
 }
 
@@ -115,27 +116,31 @@ body h2 {
   }
 }
 
-.about-scss {
+img {
+  width: 100px;
+}
+
+.about-scss .wrapper {
   margin: 50px 100px;
 }
-.about-scss .container {
+.about-scss .wrapper .container {
   display: grid;
   gap: 30px;
   grid-template-columns: repeat(3, [col-start] 1fr);
   margin: 30px auto;
 }
 @media (max-width: 768px) {
-  .about-scss .container {
+  .about-scss .wrapper .container {
     display: grid;
     grid-template-columns: 1fr;
   }
 }
-.about-scss .container .item {
+.about-scss .wrapper .container .item {
   background-color: #9a9797;
   padding: 40px 30px;
   border-radius: 20px;
 }
-.about-scss .container .item h3 {
+.about-scss .wrapper .container .item h3 {
   font-size: 20px;
   color: #101010;
   padding: none;
@@ -144,24 +149,24 @@ body h2 {
   text-transform: uppercase;
 }
 @media (max-width: 576px) {
-  .about-scss .container .item h3 {
+  .about-scss .wrapper .container .item h3 {
     font-size: 18px;
   }
 }
-.about-scss .container .item p {
+.about-scss .wrapper .container .item p {
   color: #FFFFFF;
 }
 @media (max-width: 576px) {
-  .about-scss .container .item p {
+  .about-scss .wrapper .container .item p {
     font-size: 16px;
   }
 }
-.about-scss .container .item:nth-child(even) {
+.about-scss .wrapper .container .item:nth-child(even) {
   background-color: #cf6299;
   padding: 40px 30px;
   border-radius: 20px;
 }
-.about-scss .container .item:nth-child(even) h3 {
+.about-scss .wrapper .container .item:nth-child(even) h3 {
   font-size: 20px;
   color: #101010;
   padding: none;
@@ -170,17 +175,15 @@ body h2 {
   text-transform: uppercase;
 }
 @media (max-width: 576px) {
-  .about-scss .container .item:nth-child(even) h3 {
+  .about-scss .wrapper .container .item:nth-child(even) h3 {
     font-size: 18px;
   }
 }
-.about-scss .container .item:nth-child(even) p {
+.about-scss .wrapper .container .item:nth-child(even) p {
   color: #FFFFFF;
 }
 @media (max-width: 576px) {
-  .about-scss .container .item:nth-child(even) p {
+  .about-scss .wrapper .container .item:nth-child(even) p {
     font-size: 16px;
   }
 }
-
-/*# sourceMappingURL=main.css.map */

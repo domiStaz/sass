@@ -1,54 +1,59 @@
 @import '_variables';
 @import '_mixin';
 
+
+
+
 header{
-
-    background-color: $white-color;
-    padding: 20px 20px;
-
     .wrapper{
+
+        background-color: $white-color;
+        padding: 20px 20px;
+        max-width: 1170px;
+        margin: 0 auto;
+
         @include grid($columns: 1fr 3fr, $gap: 10px);
-                
-        img{
-            width: 60px;
-            place-self: center;
-        }
-        
-        nav{
-            list-style-type: none;
-            justify-content: center;
-            text-align: center;
-            padding: 0;
-
-            li { 
-                display: inline-block; 
-
-                a{
-                    display: block;
-                    padding: 6px 12px;
-                    text-decoration: none;
-                    color: $black-color;
                     
-                    &:hover{
-                        color: $primary-color;
-                    }
+            img{
+                width: 60px;
+                place-self: center;
+            }
+            
+            nav{
+                list-style-type: none;
+                justify-content: center;
+                text-align: center;
+                padding: 0;
 
-                    &.last{
-                        @include rounded-button($primary-color, $white-color, 20px);
+                li { 
+                    display: inline-block; 
 
+                    a{
+                        display: block;
+                        padding: 6px 12px;
+                        text-decoration: none;
+                        color: $black-color;
+                        
                         &:hover{
-                            @include rounded-button($secodary-color, $white-color, 20px);
+                            color: $primary-color;
+                        }
+
+                        &.last{
+                            @include rounded-button($primary-color, $white-color, 20px);
+
+                            &:hover{
+                                @include rounded-button($secodary-color, $white-color, 20px);
+                            }
                         }
                     }
                 }
+
+            }  
+        
+            @include min-width(small) {
+                @include grid($columns: 1fr 1fr, $gap: 50px);
+
             }
-
-        }  
-    
-        @include min-width(small) {
-            @include grid($columns: 1fr 1fr, $gap: 50px);
-
         }
-    }
     
 }
